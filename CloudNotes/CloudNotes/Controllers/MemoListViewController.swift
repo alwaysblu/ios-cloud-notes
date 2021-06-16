@@ -73,33 +73,27 @@ class MemoListViewController: UIViewController {
         ])
     }
     
-    private func presentAlertForDelete(indexPath: IndexPath) {
+    private func presentAlertForDelete(indexPath: IndexPath, isThereTextInSearchBar: Bool, completion: @escaping (Bool, IndexPath) -> ()) {
         let alert = UIAlertController(title: "진짜요?", message: "정말로 삭제하시겠어요?", preferredStyle: .alert)
-        let cancelAction = UIAlertAction(title: "취소", style: .default) { action in
+        let cancelAction = UIAlertAction(title: "취소", style: .default) { _ in
         }
-        let deleteAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] action in
-            guard let isThereTextInSearchBar = self?.isThereTextInSearchBar, isThereTextInSearchBar else {
-                self?.memoSplitViewController?.detail.deleteMemo(indexPathRow: indexPath.row)
-                return
-            }
-            guard let indexPathRow = MemoCache.shared.memoDataList.firstIndex(of: MemoCache.shared.searchedMemoResults[indexPath.row]) else {
-                return
-            }
-            self?.memoSplitViewController?.detail.deleteMemo(indexPathRow: indexPathRow)
+        let deleteAction = UIAlertAction(title: "삭제", style: .destructive) { _ in
+            completion(isThereTextInSearchBar, indexPath)
         }
         alert.addAction(cancelAction)
         alert.addAction(deleteAction)
-        self.locateActionSheet(alertController: alert)
         self.present(alert, animated: true, completion: nil)
     }
     
-    private func locateActionSheet(alertController: UIAlertController) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            if let popoverController = alertController.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            }
+    let deleteAction: (Bool, IndexPath) -> () = { (isThereTextInSearchBar: Bool, indexPath: IndexPath) in
+        guard isThereTextInSearchBar else {
+            DetailMemoViewController().deleteMemo(indexPathRow: indexPath.row)
+            return
         }
+        guard let indexPathRow = MemoCache.shared.memoDataList.firstIndex(of: MemoCache.shared.searchedMemoResults[indexPath.row]) else {
+            return
+        }
+        DetailMemoViewController().deleteMemo(indexPathRow: indexPathRow)
     }
     
     private func shareMemo(indexPath: IndexPath) {
@@ -112,17 +106,8 @@ class MemoListViewController: UIViewController {
         }
         let text = allText
         let activity = UIActivityViewController(activityItems: [text], applicationActivities: nil)
-        self.locateActivityController(alertController: activity)
+        locateActivityController(alertController: activity)
         self.present(activity, animated: true, completion: nil)
-    }
-    
-    private func locateActivityController(alertController: UIActivityViewController) {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            if let popoverController = alertController.popoverPresentationController {
-                popoverController.sourceView = self.view
-                popoverController.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
-            }
-        }
     }
 }
 
@@ -167,7 +152,10 @@ extension MemoListViewController: UITableViewDelegate {
             completionhalder(true)
         }
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (action, view, completionhalder) in
-            self?.presentAlertForDelete(indexPath: indexPath)
+            guard let isThereTextInSearchBar = self?.isThereTextInSearchBar, let deleteAction = self?.deleteAction else {
+                return
+            }
+            self?.presentAlertForDelete(indexPath: indexPath, isThereTextInSearchBar: isThereTextInSearchBar, completion: deleteAction)
             completionhalder(true)
         }
         return UISwipeActionsConfiguration(actions: [shareAction, deleteAction])
