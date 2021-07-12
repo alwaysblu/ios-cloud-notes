@@ -1,6 +1,6 @@
 # iOS-Cloud-Notes
 
-## :pushpin: 구현
+## :pushpin: 구현사항
 
 * Split View Controller
 * Date Formatter 
