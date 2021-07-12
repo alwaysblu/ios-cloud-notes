@@ -1,6 +1,6 @@
 # iOS-Cloud-Notes
 
-[구현 완성 브랜치](https://github.com/alwaysblu/ios-cloud-notes/tree/step4)
+[구현 완성된 코드가 있는 Branch](https://github.com/alwaysblu/ios-cloud-notes/tree/step4)
 
 ## :pushpin: 핵심 키워드
 
