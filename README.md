@@ -13,7 +13,7 @@
 * 테이블 뷰에서 스와이프를 통한 삭제 기능
 * 의존성 관리도구 (CocoaPods)
 * 드롭박스 연동
-* Alert
+* Alert Controller
 * Attributed String
 * Search Controller
 * Dark Mode
