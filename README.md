@@ -180,7 +180,42 @@ private func addTextViewTextAttribute(textView: UITextView, allText: String, tit
 
 ## :pushpin: ​구현사항 
 
+<br>
 
+ 
+
+<img src="https://user-images.githubusercontent.com/75533266/120472740-3b9af100-c3e1-11eb-8b4a-5c66b14e0f74.gif" alt="step1_02" style="zoom:150%;" />
+
+
+
+![step2_01](https://user-images.githubusercontent.com/75533266/120967437-66e75c80-c7a2-11eb-9db2-9ffd75e9c3b6.gif)
+
+
+![step2_02](https://user-images.githubusercontent.com/75533266/120967596-a2822680-c7a2-11eb-9638-0dcfe6344f46.gif)
+
+
+
+![step2_03](https://user-images.githubusercontent.com/75533266/120967795-ed9c3980-c7a2-11eb-9efb-8be58c9c7c85.gif)
+
+
+
+![step2_04](https://user-images.githubusercontent.com/75533266/120967818-f4c34780-c7a2-11eb-9487-b68513e21f45.gif)
+
+
+![step2_05](https://user-images.githubusercontent.com/75533266/120967992-381db600-c7a3-11eb-9f5e-7fb82c1be5e2.gif)
+
+
+
+
+![step2_06](https://user-images.githubusercontent.com/75533266/120968024-466bd200-c7a3-11eb-89ed-a5fd3c783656.gif)
+
+
+![step2_07](https://user-images.githubusercontent.com/75533266/120968097-64d1cd80-c7a3-11eb-8a40-b9653904a6aa.gif)
+
+
+![step2_08](https://user-images.githubusercontent.com/75533266/120968201-8468f600-c7a3-11eb-96a7-6e6a0051e384.gif)
+
+![step4_01](https://user-images.githubusercontent.com/75533266/122244817-243f2600-cf00-11eb-86fb-40e68ee28454.gif)
 
 
 
