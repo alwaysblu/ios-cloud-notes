@@ -186,6 +186,8 @@ private func addTextViewTextAttribute(textView: UITextView, allText: String, tit
 
 ![step1_00](https://user-images.githubusercontent.com/75533266/120472984-8288e680-c3e1-11eb-91d7-697d504d1121.gif)
 
+<img src="https://user-images.githubusercontent.com/75533266/120472740-3b9af100-c3e1-11eb-8b4a-5c66b14e0f74.gif" alt="step1_02" style="zoom:150%;" />
+
 ![step2_01](https://user-images.githubusercontent.com/75533266/120967437-66e75c80-c7a2-11eb-9db2-9ffd75e9c3b6.gif)
 
 ![step2_02](https://user-images.githubusercontent.com/75533266/120967596-a2822680-c7a2-11eb-9638-0dcfe6344f46.gif)
