@@ -1,6 +1,6 @@
 # iOS-Cloud-Notes
 
-## :pushpin: 핵심 
+## :pushpin: 핵심 키워드
 
 * Split View Controller
 * Date Formatter 
