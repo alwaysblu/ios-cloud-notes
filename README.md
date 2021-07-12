@@ -1,6 +1,6 @@
 # iOS-Cloud-Notes
 
-## :pushpin: 구현 사항
+## :pushpin: 핵심 
 
 * Split View Controller
 * Date Formatter 
@@ -207,7 +207,7 @@ private func addTextViewTextAttribute(textView: UITextView, allText: String, tit
 <br>
 
 
-## :pushpin: ​구현 이미지 
+## :pushpin: ​구현  
 
 <br>
 
