@@ -15,7 +15,7 @@
 * Attributed String
 * Search Controller
 * Dark Mode
-* .gitignore를 활용하여 드롭박스 키 
+* .gitignore를 활용하여 드롭박스 키 숨기기
 
 <br>
 
