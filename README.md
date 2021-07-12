@@ -20,7 +20,7 @@
 
 <br>
 
-## 커밋 컨벤션
+## :pushpin: Commit Convention
 
 ```swift
 # <타입>: <제목>
