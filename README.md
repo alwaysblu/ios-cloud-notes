@@ -207,7 +207,7 @@ private func addTextViewTextAttribute(textView: UITextView, allText: String, tit
 <br>
 
 
-## :pushpin: ​구현  
+## :pushpin: ​구현 사항 
 
 <br>
 
